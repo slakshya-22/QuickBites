@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+
+
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    -webkit-user-select: none; /* Prevent text selection */
+    user-select: none;
+    -webkit-touch-callout: none; /* Disable iOS menu */
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    background-color: transparent; /* Prevent black screen */
+}

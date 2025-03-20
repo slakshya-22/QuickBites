@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate hook
 import heroImg from '../../assets/hero.jpeg';
 
 const slides = [
@@ -22,6 +23,7 @@ const slides = [
 
 const HeroSection = () => {
     const [activeSlide, setActiveSlide] = useState(0);
+    const navigate = useNavigate(); // Initialize useNavigate
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -49,7 +51,6 @@ const HeroSection = () => {
                 </nav>
             </header>
 
-
             <main className="flex flex-col md:flex-row items-center justify-center pt-36 px-4 sm:px-10 md:px-16 lg:px-28 gap-10">
                 <div className="flex-1 text-center md:text-left w-full max-w-xl text-box">
                     <div className="overflow-hidden relative min-h-[35vh] md:min-h-[40vh]">
@@ -72,7 +73,13 @@ const HeroSection = () => {
                     </div>
 
                     <div className="flex flex-col items-center gap-3">
-                        <button className="bg-orange-500 text-white text-lg font-semibold py-3 px-8 rounded-full shadow-md hover:scale-105 transform transition-all duration-300 cursor-pointer">
+                        <button
+                            className="bg-orange-500 text-white text-lg font-semibold py-3 px-8 rounded-full shadow-md hover:scale-105 transform transition-all duration-300 cursor-pointer"
+                            onClick={() => {
+                                // Navigate to the menu page using useNavigate
+                                navigate('/menu');
+                            }}
+                        >
                             View Menu
                         </button>
 
@@ -100,73 +107,6 @@ const HeroSection = () => {
                     </div>
                 </div>
             </main>
-
-            {/* Media Queries */}
-            <style>
-                {`
-    @media (max-width: 1024px) {
-        .text-box, .img-box {
-            width: 50%;
-        }
-
-        .img-box img {
-            height: auto; 
-            width: 100%; 
-            max-height: 400px; 
-        }
-
-        .text-box h1 {
-            font-size: 3rem;
-            line-height: 3.2rem;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .text-box, .img-box {
-            width: 50%;
-        }
-
-        .img-box img {
-            height: auto; 
-            width: 100%; 
-            max-height: 350px; 
-        }
-
-        .text-box h1 {
-            font-size: 2.5rem;
-            line-height: 2.8rem;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .text-box {
-            width: 100%;
-            padding: 0 1rem;
-            min-height: auto;
-        }
-
-        .text-box h1 {
-            font-size: 2rem;
-            line-height: 2.4rem;
-            margin-bottom: 1rem;
-        }
-
-        .text-box p {
-            margin-bottom: 0.8rem;
-        }
-
-        .button-container {
-            margin-top: 0.5rem;
-        }
-
-        .img-box img {
-            height: auto;
-            width: 100%;
-            max-height: 300px;
-        }
-    }
-    `}
-            </style>
         </div>
     );
 };

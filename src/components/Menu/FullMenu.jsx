@@ -16,7 +16,7 @@ export const FullMenu = () => {
   );
 
   return (
-    <div className="p-4 sm:p-6 pt-[5rem] md:pt-[7rem] lg:pt-[8rem]">
+    <div id='menu' className="p-4 sm:p-6 pt-[5rem] md:pt-[7rem] lg:pt-[8rem]">
       <h1 className="text-3xl sm:text-4xl font-bold text-orange-500 text-center mb-2">
         Full Menu
       </h1>

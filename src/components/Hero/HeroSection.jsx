@@ -23,7 +23,7 @@ const slides = [
 
 const HeroSection = () => {
     const [activeSlide, setActiveSlide] = useState(0);
-    const navigate = useNavigate(); // Initialize useNavigate
+    const navigate = useNavigate(); 
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -76,7 +76,7 @@ const HeroSection = () => {
                         <button
                             className="bg-orange-500 text-white text-lg font-semibold py-3 px-8 rounded-full shadow-md hover:scale-105 transform transition-all duration-300 cursor-pointer"
                             onClick={() => {
-                                // Navigate to the menu page using useNavigate
+                                
                                 navigate('/menu');
                             }}
                         >

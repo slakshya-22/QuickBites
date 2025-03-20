@@ -1,0 +1,22 @@
+/* .cart-container {
+    display: grid;
+    gap: 1rem;
+}
+
+@media (max-width: 640px) {
+    .cart-container {
+        grid-template-columns: 1fr; 
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .cart-container {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (min-width: 1025px) {
+    .cart-container {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+} */

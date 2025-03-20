@@ -6,12 +6,34 @@
 * {
     font-family: 'Poppins', sans-serif;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
-    -webkit-user-select: none; /* Prevent text selection */
+    -webkit-user-select: none; 
     user-select: none;
-    -webkit-touch-callout: none; /* Disable iOS menu */
+    -webkit-touch-callout: none;
     -moz-user-select: none; 
     -ms-user-select: none; 
-    background-color: transparent; /* Prevent black screen */
+    background-color: transparent; 
+  
+        
+
+    
 }
+
+
+
+.nav-link {
+    font-weight: 500;
+    color: #1E293B;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #F97316;
+}
+
+
+
+
